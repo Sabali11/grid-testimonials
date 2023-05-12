@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 10px;
+    /* margin: 10%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    grid-area: item-one;
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.item2 {
+    grid-area: item-two;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+    max-width: 200px;
+    padding: 10px;
+}
+
+.item3 {
+    grid-area: item-three;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 200px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.item4 {
+    grid-area: item-four;
+    max-width: 200px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 3px grey;
+    border-radius: 10px;
+}
+
+.item5 {
+    grid-area: item-five;
+    border-radius: 10px;
+    background-color: hsl(219, 29%, 14%);
+    max-width: 500px;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "item-one item-one item-two item-three" "item-four item-five item-five item-three";
+    gap: 10px;
+    padding: 10px;
+    margin-top: 85px;
+}
+
+@media (max-width:600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        flex: 100%;
+        row-gap: 20px;
+    }
+    .item2,
+    .item3,
+    .item4 {
+        /* flex: 100%; */
+        max-width: 100%;
+    }
+    .item1 {
+        order: 1;
+    }
+    .item2 {
+        order: 2;
+    }
+    .item3 {
+        order: 5;
+    }
+    .item4 {
+        order: 3
+    }
+    .item5 {
+        order: 4
+    }
+}
+
+.mini-container {
+    display: flex;
+}
+
+.mini-container h3 {
+    margin-top: 10px;
+}
+
+.xx1 {
+    margin: 10px;
+}
+
+.xx2 {
+    text-align: justify;
+}
